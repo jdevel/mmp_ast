@@ -1,0 +1,13 @@
+CDR:
+Dump the contents of the SQL/cdr.sql into it's own database.
+Preferably asterisk_cdr since the config file is already set for that.
+
+REAL TIME ASTERISK:
+Create a database called asterisk_rt and dump the contents of the asterisk_rt.sql into that database.
+
+CONF FILES:
+I recommend doing cp -Rp /etc/asterisk /etc/asterisk_date_here
+before copying these files into place.
+Edit the conf files and add the proper database parameters and then
+copy them to /etc/asterisk.
+Restart asterisk. Done.
