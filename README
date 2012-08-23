@@ -11,3 +11,7 @@ before copying these files into place.
 Edit the conf files and add the proper database parameters and then
 copy them to /etc/asterisk.
 Restart asterisk. Done.
+
+NOTES:
+conf + asterisk_confs directories hold configs neccessary
+for both Asterisk and Asterisk realtime with mysql.
