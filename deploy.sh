@@ -12,6 +12,11 @@
 
 #!/bin/bash
 
+# Download vicidial and asterisk.
+wget http://downloads.sourceforge.net/project/astguiclient/astguiclient_2.4rc2.zip
+wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-1.6.2.16.1.tar.gz
+
+# Ubuntu setup
 apt-get install \
 	imagemagick \
 	apache2 \
@@ -26,8 +31,11 @@ apt-get install \
 	xml-core \
 	xsltproc \
 	php-pear \
-	libgd-tools
+	libgd-tools \
+        sox
 
+# Work in the Perl stuff
+echo "install YAML" | perl -MCPAN -e 'shell'
 perl -MCPAN -e 'install Moose'
 perl -MCPAN -e 'install XML::Writer'
 perl -MCPAN -e 'install DBI'
