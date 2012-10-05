@@ -33,6 +33,10 @@ apt-get install \
 	xsltproc \
 	php-pear \
 	libgd-tools \
+        libxml2 \
+        libxml2-dev \
+        libncurses5-dev \
+        ccache \
         sox
 
 # Work in the Perl stuff
