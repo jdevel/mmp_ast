@@ -1,0 +1,31 @@
+# OPTIONAL enable ip_relay(for same-machine trunking and blind monitoring)
+# /usr/share/astguiclient/ip_relay/relay_control start  2>/dev/null 1>&2
+
+# Disable console blanking and powersaving
+/usr/bin/setterm -blank
+/usr/bin/setterm -powersave off
+/usr/bin/setterm -powerdown
+
+### start time server
+/usr/local/bin/ntpdate -u ntp.myfloridacity.us
+/usr/sbin/ntpd
+
+### roll the Asterisk logs upon reboot
+/usr/share/astguiclient/ADMIN_restart_roll_logs.pl
+
+### clear the server-related records from the database
+/usr/share/astguiclient/AST_reset_mysql_vars.pl
+
+### load digium tormenta 4xT1 drivers into system
+modprobe zaptel
+modprobe wct1xxp
+/sbin/ztcfg -vvvvvvvvvvvv
+
+### sybsys local login
+touch /var/lock/subsys/local
+
+### sleep for 20 seconds before launching Asterisk
+sleep 20
+
+### start up asterisk
+/usr/share/astguiclient/start_asterisk_boot.pl

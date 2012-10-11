@@ -16,6 +16,9 @@
 wget http://downloads.sourceforge.net/project/astguiclient/astguiclient_2.4rc2.zip
 wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-1.6.2.16.1.tar.gz
 
+#/var/lock/subsys
+mkdir /var/lock/subsys
+
 # Ubuntu setup
 apt-get install \
 	imagemagick \
