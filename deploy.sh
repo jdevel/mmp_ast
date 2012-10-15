@@ -14,7 +14,12 @@
 
 # Download vicidial and asterisk.
 wget http://downloads.sourceforge.net/project/astguiclient/astguiclient_2.4rc2.zip
-wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-1.6.2.16.1.tar.gz
+# wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-1.6.2.16.1.tar.gz
+# wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-addons-1.6.2.4.tar.gz
+wget http://downloads.asterisk.org/pub/telephony/libpri/old/libpri-1.4.13.tar.gz
+wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-1.4.43.tar.gz
+wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-addons-1.4.13.tar.gz
+wget http://downloads.asterisk.org/pub/telephony/dahdi-linux/releases/dahdi-linux-2.5.1.tar.gz
 
 #/var/lock/subsys
 mkdir /var/lock/subsys
