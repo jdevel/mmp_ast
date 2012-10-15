@@ -21,3 +21,17 @@ deploy.sh is for a barebones vicidial setup.
 deploy2.sh is for Asterisk realtime so asterisk is MySQL database managable
 instead of file based.
 deploy2 also prepares for JAACT.
+
+INSTALL
+1. ubuntu-build.sh
+2. deploy or deploy2.sh
+3. vici_perl.sh
+4. Install Asterisk + addons + dahdi-linux + dahdi-tools + libpri (in this order)
+5. Create MySQL tables.
+6. copy php.ini to web location.
+7. Install astguiclient.
+8. copy astgui_initd to /etc/init.d and check 'runlevel'
+   Then do 'ln -s /etc/init.d/astgui_initd /etc/rc(x).d/S99_astgui_initd'
+9. copy crontab-stuff.txt into root crontab
+10. Configure Asterisk for sip provider.
+11. Enjoy!

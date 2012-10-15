@@ -20,6 +20,7 @@ wget http://downloads.asterisk.org/pub/telephony/libpri/old/libpri-1.4.13.tar.gz
 wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-1.4.21.2.tar.gz
 wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-addons-1.4.13.tar.gz
 wget http://downloads.asterisk.org/pub/telephony/dahdi-linux/releases/dahdi-linux-2.5.1.tar.gz
+wget http://downloads.asterisk.org/pub/telephony/dahdi-tools/dahdi-tools-2.5.1.tar.gz
 
 # /var/lock/subsys
 mkdir /var/lock/subsys
@@ -44,7 +45,8 @@ apt-get install \
         libxml2-dev \
         libncurses5-dev \
         ccache \
-        sox
+        sox \
+        lame
 
 # Work in the Perl stuff
 echo "install YAML" | perl -MCPAN -e 'shell'
