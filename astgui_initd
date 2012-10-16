@@ -1,6 +1,10 @@
 # OPTIONAL enable ip_relay(for same-machine trunking and blind monitoring)
 # /usr/share/astguiclient/ip_relay/relay_control start  2>/dev/null 1>&2
 
+if [ ! -d "/var/lock/subsys" ]; then
+    mkdir /var/lock/subsys
+fi
+
 # Disable console blanking and powersaving
 /usr/bin/setterm -blank
 /usr/bin/setterm -powersave off
