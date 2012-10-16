@@ -1,3 +1,6 @@
+BEFORE YOU INSTALL:
+Notes, All of this is based on Ubuntu server 8.04 LTS.
+
 CDR:
 Dump the contents of the SQL/cdr.sql into it's own database.
 Preferably asterisk_cdr since the config file is already set for that.
@@ -16,13 +19,13 @@ NOTES:
 conf + asterisk_confs directories hold configs neccessary
 for both Asterisk and Asterisk realtime with mysql.
 
-DEPLOY vs DEPLOY2
+DEPLOY vs DEPLOY2:
 deploy.sh is for a barebones vicidial setup.
 deploy2.sh is for Asterisk realtime so asterisk is MySQL database managable
 instead of file based.
 deploy2 also prepares for JAACT.
 
-INSTALL
+INSTALL:
 1. ubuntu-build.sh
 2. deploy or deploy2.sh
 3. vici_perl.sh
