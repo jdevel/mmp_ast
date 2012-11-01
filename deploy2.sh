@@ -21,7 +21,7 @@ wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-
 wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-addons-1.4.13.tar.gz
 wget http://downloads.asterisk.org/pub/telephony/dahdi-linux/releases/dahdi-linux-2.5.1.tar.gz
 wget http://downloads.asterisk.org/pub/telephony/dahdi-tools/dahdi-tools-2.5.1.tar.gz
-wget http://downloads.asterisk.org/pub/telephony/zaptel/zaptel-1.2.27.tar.gz
+wget http://downloads.asterisk.org/pub/telephony/zaptel/zaptel-1.4.12.1.tar.gz
 
 echo "Start with dahdi and zaptel drivers first"
 
