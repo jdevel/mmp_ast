@@ -25,6 +25,9 @@ wget http://downloads.asterisk.org/pub/telephony/zaptel/zaptel-1.4.12.1.tar.gz
 
 echo "Start with dahdi and zaptel drivers first"
 
+wget http://asterisk.hosting.lv/bin/codec_g729-ast14-gcc4-glibc-pentium4.so
+cp codec_g729-ast14-gcc4-glibc-pentium4.so codec_g729.so
+
 # /var/lock/subsys
 mkdir /var/lock/subsys
 
