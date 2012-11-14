@@ -27,9 +27,12 @@ deploy2 also prepares for JAACT.
 
 INSTALL:
 1. ubuntu-build.sh
-2. deploy or deploy2.sh
-3. vici_perl.sh
-4. Install Asterisk + addons + dahdi-linux + dahdi-tools + libpri (in this order)
+2. perl -MCPAN -e shell and run these 2 commands.
+  o conf prerequisites_policy follow
+  o conf commit
+3. deploy or deploy2.sh
+4. vici_perl.sh
+5. Install dahdi-linux, dahdi-tools, libpri, Asterisk, Addons (in this order)
 5. Create MySQL tables.
 6. copy php.ini to web location.
 7. Install astguiclient.
