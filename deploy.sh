@@ -21,7 +21,7 @@ wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-
 wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-addons-1.4.13.tar.gz
 wget http://downloads.asterisk.org/pub/telephony/dahdi-linux/releases/dahdi-linux-2.5.1.tar.gz
 wget http://downloads.asterisk.org/pub/telephony/dahdi-tools/dahdi-tools-2.5.1.tar.gz
-wget http://downloads.asterisk.org/pub/telephony/zaptel/zaptel-1.4.12.1.tar.gz
+#wget http://downloads.asterisk.org/pub/telephony/zaptel/zaptel-1.4.12.1.tar.gz
 
 echo "start with dahdi + zaptel drivers first"
 
@@ -52,7 +52,9 @@ apt-get install \
         libncurses5-dev \
         ccache \
         sox \
-        lame
+        lame \
+        zaptel \
+        zaptel-source
 
 # Work in the Perl stuff
 echo "install YAML" | perl -MCPAN -e 'shell'
