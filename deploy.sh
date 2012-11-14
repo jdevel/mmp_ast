@@ -59,6 +59,8 @@ apt-get install \
 
 # Build the zaptel driver
 m-a a-i zaptel
+genzaptelconf
+m-a a-i zaptel
 
 # Work in the Perl stuff
 echo "install YAML" | perl -MCPAN -e 'shell'
