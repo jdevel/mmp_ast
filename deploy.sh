@@ -54,7 +54,11 @@ apt-get install \
         sox \
         lame \
         zaptel \
-        zaptel-source
+        zaptel-source \
+        module-assistant
+
+# Build the zaptel driver
+m-a a-i zaptel
 
 # Work in the Perl stuff
 echo "install YAML" | perl -MCPAN -e 'shell'
