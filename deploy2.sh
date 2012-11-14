@@ -55,15 +55,7 @@ apt-get install \
         libncurses5-dev \
         ccache \
         sox \
-        lame \
-        zaptel \
-        zaptel-source \
-        module-assistant
-
-# Build the zaptel driver
-#m-a a-i zaptel
-#genzaptelconf
-#m-a a-i zaptel
+        lame
 
 # Work in the Perl stuff
 echo "install YAML" | perl -MCPAN -e 'shell'
