@@ -21,7 +21,7 @@ wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-
 wget http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-addons-1.4.13.tar.gz
 wget http://downloads.asterisk.org/pub/telephony/dahdi-linux/releases/dahdi-linux-2.5.1.tar.gz
 wget http://downloads.asterisk.org/pub/telephony/dahdi-tools/dahdi-tools-2.5.1.tar.gz
-#wget http://downloads.asterisk.org/pub/telephony/zaptel/zaptel-1.4.12.1.tar.gz
+wget http://downloads.asterisk.org/pub/telephony/zaptel/zaptel-1.4.12.1.tar.gz
 
 echo "start with dahdi + zaptel drivers first"
 
@@ -30,6 +30,9 @@ cp codec_g729-ast14-gcc4-glibc-pentium4.so codec_g729.so
 
 #/var/lock/subsys
 mkdir /var/lock/subsys
+
+# Add the asterisk user
+useradd asterisk
 
 # Ubuntu setup
 apt-get install \
@@ -58,9 +61,9 @@ apt-get install \
         module-assistant
 
 # Build the zaptel driver
-m-a a-i zaptel
-genzaptelconf
-m-a a-i zaptel
+#m-a a-i zaptel
+#genzaptelconf
+#m-a a-i zaptel
 
 # Work in the Perl stuff
 echo "install YAML" | perl -MCPAN -e 'shell'
