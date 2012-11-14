@@ -58,7 +58,7 @@ apt-get install \
 echo "install YAML" | perl -MCPAN -e 'shell'
 perl -MCPAN -e 'install Moose'
 perl -MCPAN -e 'install XML::Writer'
-perl -MCPAN -e 'install DBI'
+echo "install TIMB/DBI-1.617.tar.gz" | perl -MCPAN -e 'shell'
 perl -MCPAN -e 'force install DBD::mysql'
 perl -MCPAN -e 'install XML::Simple'
 perl -MCPAN -e 'install XML::Generator'
