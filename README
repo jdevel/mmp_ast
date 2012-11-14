@@ -27,9 +27,7 @@ deploy2 also prepares for JAACT.
 
 INSTALL:
 1. ubuntu-build.sh
-2. perl -MCPAN -e shell and run these 2 commands.
-  o conf prerequisites_policy follow
-  o conf commit
+2. perl -MCPAN -e shell (Setup Perl MCPAN policy to follow)
 3. deploy or deploy2.sh
 4. vici_perl.sh
 5. Install dahdi-linux, dahdi-tools, libpri, Asterisk, Addons (in this order)
