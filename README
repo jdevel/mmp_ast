@@ -30,12 +30,15 @@ INSTALL:
 2. perl -MCPAN -e shell (Setup Perl MCPAN policy to follow)
 3. deploy or deploy2.sh
 4. vici_perl.sh
-5. Install dahdi-linux, dahdi-tools, libpri, Asterisk, Addons (in this order)
-5. Create MySQL tables.
-6. copy php.ini to web location.
-7. Install astguiclient.
-8. copy astgui_initd to /etc/init.d and check 'runlevel'
+5. Install dahdi-linux, dahdi-tools, libpri, zaptel, Asterisk, Addons (in this order)
+6. Create MySQL tables.
+7. copy php.ini to web location.
+8. Install astguiclient.
+9. copy astgui_initd to /etc/init.d and check 'runlevel'
    Then do 'ln -s /etc/init.d/astgui_initd /etc/rc(x).d/S99_astgui_initd'
-9. copy crontab-stuff.txt into root crontab
-10. Configure Asterisk for sip provider.
-11. Enjoy!
+10. copy crontab-stuff.txt into root crontab
+11. Configure Asterisk for sip provider.
+12. Enjoy!
+
+CAVEAT:
+Ubuntu is weird. You have to modprobe crc_ccitt before modprobing ztdummy.
