@@ -40,5 +40,9 @@ INSTALL:
 11. Configure Asterisk for sip provider.
 12. Enjoy!
 
+POST_INSTALL:
+1.) /etc/asterisk chgrp -R www-data . && chmod -R 664 /etc/asterisk/*
+2.) chown -R www-data.www-data /var/www
+
 CAVEAT:
 Ubuntu is weird. You have to modprobe crc_ccitt before modprobing ztdummy.
