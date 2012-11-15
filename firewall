@@ -1,0 +1,52 @@
+#!/bin/bash
+flush() {
+	iptables -F INPUT
+	iptables -F OUTPUT
+	iptables -F FORWARD
+}
+
+start() {
+	iptables -P INPUT DROP
+	iptables -P OUTPUT ACCEPT
+	iptables -P FORWARD DROP
+
+	## LOOPBACK ALLOW
+	iptables -A INPUT -i lo -j ACCEPT
+
+        ## ALOW BACK IN NSLOOKUPS AND SUCH
+        iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT
+
+	## DEFAULT ALLOWS
+	# iptables -A INPUT -s 192.168.1.0/24 -j ACCEPT
+	# iptables -A INPUT -s sip.callwithus.com -j ACCEPT
+
+	## SSH
+	iptables -A INPUT -p tcp --dport 22 -m limit --limit 1/minute --limit-burst 2 -j ACCEPT
+	iptables -A INPUT -p tcp --dport 22 -j DROP
+
+	## OTHER SERVICES
+	iptables -A INPUT -p tcp --dport 80 --syn -j ACCEPT
+
+  ## EXPLICIT BLOCKS
+  # iptables -A INPUT -s 64.85.162.136 -j DROP
+  # iptables -A INPUT -s 64.85.162.137 -j DROP
+}
+
+stop() {
+	iptables -P INPUT ACCEPT
+	iptables -P OUTPUT ACCEPT
+	iptables -P FORWARD ACCEPT
+	flush
+}
+
+case $1 in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	*)
+		echo "$0 start|stop"
+		;;
+esac
