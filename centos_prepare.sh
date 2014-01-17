@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Install basic stuff available immediately via YUM
+# yum groupinstall 'Development Tools'
 yum install wget make perl perl-CPAN subversion kernel kernel-headers kernel-devel rpm-build gcc httpd php mysql mysql-server php-mysql gcc-c++ ncurses-devel libxml2 libxml2-devel coreutils subversion
 
 # Get the rpmforge rpm so we have access to other misc rpm's needed for Vicidial.
